@@ -224,6 +224,7 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
+    "info",
     "admin"
     },
     sudo_users = {110626080,103649648,143723991,111020322,0,tonumber(181742153)},--Sudo users
@@ -294,6 +295,8 @@ Promote an admin by id OR username *Sudo only
 
 !removeadmin [id|username]
 Demote an admin by id OR username *Sudo only
+
+!info [id|username]
 
 !list groups
 Get a list of all groups
