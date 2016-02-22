@@ -1220,42 +1220,40 @@ end
 
 return {
   patterns = {
-  "^[](add)$",
-  "^[](add) (realm)$",
-  "^[](rem)$",
-  "^[](rem) (realm)$",
-  "^[](rules)$",
-  "^[](about)$",
-  "^[](setname) (.*)$",
-  "^[](setphoto)$",
-  "^[](promote) (.*)$",
-  "^[](promote)",
-  "^[](help)$",
-  "^[](clean) (.*)$",
-  "^[](kill) (chat)$",
-  "^[](kill) (realm)$",
-  "^[](demote) (.*)$",
-  "^[](demote)",
-  "^[](set) ([^%s]+) (.*)$",
-  "^[](lock) (.*)$",
-  "^[](setowner) (%d+)$",
-  "^[](setowner)",
-  "^[](owner)$",
-  "^[](res) (.*)$",
-  "^[](setgpowner) (%d+) (%d+)$",-- (group id) (owner id)
-  "^[](unlock) (.*)$",
-  "^[](setflood) (%d+)$",
-  "^[](settings)$",
--- "^[](public) (.*)$",
-  "^[](modlist)$",
-  "^[](newlink)$",
-  "^[](link)$",
-  "^[](kickinactive)$",
-  "^[](kickinactive) (%d+)$",
-  "%[(photo)%]",
-  "^!!tgservice (.+)$",
+    "^[!/]([Bb]anall) (.*)$", --banall
+    "^[!/]([Bb]anall)$",  --banall
+    "^[!/]([Bb]anlist) (.*)$", --banlist
+    "^[!/]([Bb]anlist)$", --banlist
+    "^[!/]([Gg]banlist)$", --gbanlist
+    "^[!/]([Bb]an) (.*)$", --ban
+    "^[!/]([Kk]ick)$", --kick
+    "^[!/]([Uu]nban) (.*)$", --unban
+    "^[!/]([Uu]nbanall) (.*)$", --unbanall
+    "^[!/]([Uu]nbanall)$", --unbanall
+    "^[!/]([Kk]ick) (.*)$", --kick
+    "^[!/]([Kk]ickme)$", --kickme
+    "^[!/]([Bb]an)$", --ban
+    "^[!/]([Uu]nban)$", --unban
+    "^[!/]([Ii]d)$", --id
+    "^!!tgservice (.+)$",
+    "^([Bb]anall) (.*)$", --banall
+    "^([Bb]anall)$",  --banall
+    "^([Bb]list) (.*)$", --banlist
+    "^([Bb]anlist)$", --banlist
+    "^([Gg]banlist)$", --gbanlist
+    "^([Bb]an) (.*)$", --ban
+    "^([Kk]ick)$", --kick
+    "^([Uu]nban) (.*)$", --unban
+    "^([Uu]nbanall) (.*)$", --unbanall
+    "^([Uu]nbanall)$", --unbanall
+    "^([Kk]ick) (.*)$", --kick
+    "^([Kk]ickme)$", --kickme
+    "^([Bb]an)$", --ban
+    "^([Uu]ban)$", --unban
+    "^([Ii]d)$", --id
   },
-  run = run
+  run = run,
+  pre_process = pre_process
 }
 end
 
